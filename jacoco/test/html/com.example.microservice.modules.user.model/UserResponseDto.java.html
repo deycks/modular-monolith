@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserResponseDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">microservice</a> &gt; <a href="index.source.html" class="el_package">com.example.microservice.modules.user.model</a> &gt; <span class="el_source">UserResponseDto.java</span></div><h1>UserResponseDto.java</h1><pre class="source lang-java linenums">package com.example.microservice.modules.user.model;
+
+
+public class UserResponseDto {
+	
+	private String message;
+	private Object result;
+	
+	public void setResult(Object result) {
+<span class="nc" id="L10">		this.result = result;</span>
+<span class="nc" id="L11">	}</span>
+
+	public Object getResult() {
+<span class="nc" id="L14">		return result;</span>
+	}
+
+	public String getMessage() {
+<span class="nc" id="L18">		return message;</span>
+	}
+
+	public void setMessage(String message) {
+<span class="nc" id="L22">		this.message = message;</span>
+<span class="nc" id="L23">	}</span>
+	
+	public static Builder builder() {
+<span class="nc" id="L26">		return new Builder();</span>
+	}
+	
+	private UserResponseDto(Builder builder) {
+<span class="nc" id="L30">		super();</span>
+<span class="nc" id="L31">		this.result = builder.result;</span>
+<span class="nc" id="L32">		this.message = builder.message;</span>
+<span class="nc" id="L33">	}</span>
+
+	@Override
+	public String toString() {
+<span class="nc" id="L37">		return &quot;UserResponseDto [result=&quot; + result +  &quot;, message: +&quot;+ message +&quot; ]&quot;;</span>
+	}
+	
+	public static final class Builder {
+		private String message;
+		private Object result;
+		
+		private Builder() { }
+		
+		public Builder message(String message) {
+<span class="nc" id="L47">			this.message = message;</span>
+<span class="nc" id="L48">			return this;</span>
+		}
+		public Builder result(Object result) {
+<span class="nc" id="L51">			this.result = result;</span>
+<span class="nc" id="L52">			return this;</span>
+		}
+		
+		public UserResponseDto build() {
+<span class="nc" id="L56">			return new UserResponseDto(this);</span>
+		}
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

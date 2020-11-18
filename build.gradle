@@ -1,0 +1,53 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.0'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id 'jacoco'
+	id "org.sonarqube" version "3.0"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('jacocoVersion', '0.8.3')
+}
+
+jacoco {
+    toolVersion = jacocoVersion
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile("io.springfox:springfox-swagger2:2.6.1")
+  	compile("io.springfox:springfox-swagger-ui:2.6.1")
+  	compile group: 'org.springframework.ws', name: 'spring-ws-core', version: '3.0.10.RELEASE'
+	compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+  	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+  	
+  	classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7'
+  	testCompile group: 'org.springframework', name: 'spring-test', version: '5.3.1'
+  	testImplementation 'junit:junit:4.13'
+
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 5.0
+            }
+        }
+    }
+}
+
+test {
+	useJUnit()
+}
+

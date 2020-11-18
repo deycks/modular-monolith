@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">microservice</a> &gt; <a href="index.source.html" class="el_package">com.example.microservice.modules.user.model</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package com.example.microservice.modules.user.model;
+
+public class User {
+	
+	private String name;
+	private Integer id;
+	
+	public String getName() {
+<span class="nc" id="L9">		return name;</span>
+	}
+
+
+	public void setName(String name) {
+<span class="nc" id="L14">		this.name = name;</span>
+<span class="nc" id="L15">	}</span>
+
+
+	public Integer getId() {
+<span class="nc" id="L19">		return id;</span>
+	}
+
+
+	public void setId(Integer id) {
+<span class="nc" id="L24">		this.id = id;</span>
+<span class="nc" id="L25">	}</span>
+	
+	public static Builder builder() {
+<span class="nc" id="L28">		return new Builder();</span>
+	}
+	
+	private User(Builder builder) {
+<span class="nc" id="L32">		super();</span>
+<span class="nc" id="L33">		this.name = builder.name;</span>
+<span class="nc" id="L34">		this.id = builder.id;</span>
+<span class="nc" id="L35">	}</span>
+
+
+	@Override
+	public String toString() {
+<span class="nc" id="L40">		return &quot;User [name=&quot; + name + &quot;, id=&quot; + id + &quot;]&quot;;</span>
+	}
+	
+	public static final class Builder {
+		private String name;
+		private Integer id;
+		
+		private Builder() { }
+		
+		public Builder name(String name) {
+<span class="nc" id="L50">			this.name = name;</span>
+<span class="nc" id="L51">			return this;</span>
+		}
+		public Builder id(Integer id) {
+<span class="nc" id="L54">			this.id = id;</span>
+<span class="nc" id="L55">			return this;</span>
+		}
+		
+		public User build() {
+<span class="nc" id="L59">			return new User(this);</span>
+		}
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
