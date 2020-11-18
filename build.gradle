@@ -31,7 +31,6 @@ dependencies {
 	compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
   	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
   	
-  	classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7'
   	testCompile group: 'org.springframework', name: 'spring-test', version: '5.3.1'
   	testImplementation 'junit:junit:4.13'
 
